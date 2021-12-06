@@ -1,9 +1,3 @@
-
-
-
-
-
-
 us8Osb
 3788745062
 KienGiang
@@ -13,9 +7,6 @@ BacLieu
 wMJRt7
 1459300797
 DongNai
-Binh
-190000
-Binh Dinh
 us8Osb
 3788745062
 ThaiNguyen
@@ -892,9 +883,6 @@ QuangNinh
 F28wWf
 5873318931
 TPHoChiMinh
-Trung
-1900156789
-Ha Noi
 QTZMw4
 1023210396
 BacGiang
@@ -1241,7 +1229,7 @@ DienBien
 8969868582
 YenBai
 Binh
-19001515
+190000
 Binh Dinh
 Binh
 19001515

@@ -193,20 +193,20 @@ void SearchName(Phonebook *Heads[], ofstream &fileout, string name)
             {
                 if (Ischuoicon(p->data.Name, name))
                 {
-					gotoXY(50, 12);
-                    cout << "Tim kiem thanh cong!!!\n";
+					//gotoXY(50, 12);
+                    cout << "\n\t\tTim kiem thanh cong!!!\n";
                     Ghifile(fileout, p->data);
-					gotoXY(30, 15);
-                    cout << p->data.Name + "\t\t" + p->data.NumberPhone + "\t\t" + p->data.Address << endl;
+					//gotoXY(30, 15);
+                    cout << "\n\t\t" << p->data.Name + "\t\t" + p->data.NumberPhone + "\t\t" + p->data.Address << endl;
                     flag = false;
                 }
                 p = p->Next;
             }
         }
     }
-	gotoXY(50, 12);
+	//gotoXY(50, 12);
     if (flag == true)
-        cout << "Khong tim thay\n";
+        cout << "\n\t\tKhong tim thay !\n";
 }
 
 void SearchPhone(Phonebook *Heads[], ofstream &fileout, string name)
@@ -221,19 +221,19 @@ void SearchPhone(Phonebook *Heads[], ofstream &fileout, string name)
             {
                 if (Ischuoicon(p->data.NumberPhone, name))
                 {
-					gotoXY(50, 10);
+					//gotoXY(50, 10);
                     Ghifile(fileout, p->data);
-                    cout << "Tim kiem thanh cong\n";
-                    cout << p->data.Name + "\t\t" + p->data.NumberPhone + "\t\t" + p->data.Address << endl;
+                    cout << "\n\t\tTim kiem thanh cong\n";
+                    cout <<"\n\t\t" << p->data.Name + "\t\t" + p->data.NumberPhone + "\t\t" + p->data.Address << endl;
                     flag = false;
                 }
                 p = p->Next;
             }
         }
     }
-	gotoXY(50, 10);
+	//gotoXY(50, 10);
     if (flag == true)
-        cout << "Khong tim thay\n";
+        cout << "\n\t\tKhong tim thay\n";
 }
 
 void SearchAddress(Phonebook *Heads[], ofstream &fileout, string name)
@@ -248,20 +248,20 @@ void SearchAddress(Phonebook *Heads[], ofstream &fileout, string name)
             {
                 if (p->data.Address.compare(name) == 0)
                 {
-					gotoXY(48, 12);
-                    cout << "Tim kiem thanh cong !!!";
+					//gotoXY(48, 12);
+                    cout << "\n\n\t\tTim kiem thanh cong !!!";
                     Ghifile(fileout, p->data);
-					gotoXY(40, 14);
-                    cout << p->data.Name + "\t\t" + p->data.NumberPhone + "\t\t" + p->data.Address << endl;
+					//gotoXY(40, 14);
+                    cout <<"\n\t\t" << p->data.Name + "\t\t" + p->data.NumberPhone + "\t\t" + p->data.Address << endl;
                     flag = false;
                 }
                 p = p->Next;
             }
         }
     }
-	gotoXY(48, 12);
+	//gotoXY(48, 12);
     if (flag == true)
-        cout << "Khong tim thay !!!";
+        cout << "\n\t\tKhong tim thay !!!";
 }
 
 void UpdateInfoToName(Phonebook *Heads[], string name)
@@ -288,15 +288,15 @@ void UpdateInfoToName(Phonebook *Heads[], string name)
                 string newname;
                 string newphone;
                 string newAddress;
-				gotoXY(45, 12);
+				//gotoXY(45, 12);
 				rewind(stdin);
-                cout << "Nhap Ten moi: ";
+                cout << "\n\t\tNhap Ten moi: ";
                 getline( cin , newname );
-				gotoXY(45, 14);
-                cout << "Nhap SDT moi: ";
+				//gotoXY(45, 14);
+                cout << "\n\t\tNhap SDT moi: ";
                 getline(cin, newphone);
-				gotoXY(45, 16);
-                cout << "Nhap dia chi moi: ";
+				//gotoXY(45, 16);
+                cout << "\n\t\tNhap dia chi moi: ";
                 getline(cin, newAddress);
                 r->data.Name = newname;
                 r->data.NumberPhone = newphone;
@@ -304,8 +304,8 @@ void UpdateInfoToName(Phonebook *Heads[], string name)
             }
             else if (dem > 1)
             {
-				gotoXY(40, 12);
-                cout << "Nhap SDT Muon Sua: ";
+				//gotoXY(40, 12);
+                cout << "\n\t\tNhap SDT Muon Sua: ";
                 string sdt;
 				rewind(stdin);
                 getline(cin,sdt);
@@ -313,14 +313,14 @@ void UpdateInfoToName(Phonebook *Heads[], string name)
                 string name;
                 string phone;
                 string address;
-				gotoXY(40, 14);
-                cout << "Nhap Ten moi ";
+				//gotoXY(40, 14);
+                cout << "\n\t\tNhap Ten moi ";
                 getline(cin,name);
-				gotoXY(40, 16);
-                cout << "Nhap SDT moi ";
+				//gotoXY(40, 16);
+                cout << "\n\t\tNhap SDT moi ";
                 getline(cin,phone);
-				gotoXY(40, 18);
-                cout << "Nhap dia chi moi ";
+				//gotoXY(40, 18);
+                cout << "\n\t\tNhap dia chi moi ";
                 getline(cin,address);
                 k->data.Name = name;
                 k->data.NumberPhone = phone;
@@ -355,14 +355,14 @@ void UpdateInfoToNumber(Phonebook *Heads[], string number)
                 string newphone;
                 string newAddress;
 				rewind(stdin);
-				gotoXY(50, 10);
-                cout << "Nhap Ten moi ";
+				//gotoXY(50, 10);
+                cout << "\n\t\tNhap Ten moi ";
                 getline(cin, newname);
-				gotoXY(50, 10);
-                cout << "Nhap SDT moi ";
+				//gotoXY(50, 10);
+                cout << "\n\t\tNhap SDT moi ";
                 getline(cin, newphone);
-				gotoXY(50, 10);
-                cout << "Nhap dia chi moi ";
+				//gotoXY(50, 10);
+                cout << "\n\t\tNhap dia chi moi ";
 				getline(cin, newAddress);
                 r->data.Name = newname;
                 r->data.NumberPhone = newphone;
@@ -403,13 +403,13 @@ void DeleteToName(Phonebook *Heads[], string name)
             }
         }
     }
-	gotoXY(50, 10);
+	//gotoXY(50, 10);
     if (!flag )
     {
-        cout << "Xoa khong thanh cong\n";
+        cout << "\n\t\tXoa khong thanh cong\n";
     }
     else
-        cout << "Xoa thanh cong\n";
+        cout << "\n\t\tXoa thanh cong\n";
 }
 
 void DeleteToNumber(Phonebook *Heads[], string name)
@@ -443,13 +443,13 @@ void DeleteToNumber(Phonebook *Heads[], string name)
             }
         }
     }
-	gotoXY(50, 10);
+	//gotoXY(50, 10);
     if (!flag )
     {
-        cout << "Xoa khong thanh cong\n";
+        cout << "\n\t\tXoa khong thanh cong\n";
     }
     else
-        cout << "Xoa thanh cong\n";
+        cout << "\n\t\tXoa thanh cong\n";
 }
 
 void DisplayToFile(Phonebook *Heads[], ofstream &fileout)
@@ -523,14 +523,14 @@ void FindName(Phonebook *Heads[])								//=========Ham tim kiếm theo tên====
 	ofstream fileout;
     string name;
 	rewind(stdin);
-	gotoXY(30, 10);
-	cout << "Nhap ten hoac so hoac ky tu can tim kiem: ";
+	//gotoXY(30, 10);
+	cout << "\n\n\t\tNhap ten hoac so hoac ky tu can tim kiem: ";
 	getline(cin, name);
 	fileout.open("Timkiem.txt", ios_base::out);
     SearchName(Heads, fileout, name);
     fileout.close();
-	gotoXY(40, 5);
-	cout << "NHAN PHIM << SPACE >> DE TRO VE !";
+	//gotoXY(40, 5);
+	cout << "\n\n\t\t\tNHAN PHIM << SPACE >> DE TRO VE !";
 }
 
 void FindNumber(Phonebook *Heads[])							//=========Hàm tìm kiếm theo số điện thoại========
@@ -538,14 +538,14 @@ void FindNumber(Phonebook *Heads[])							//=========Hàm tìm kiếm theo số 
 	ofstream fileout;
     string name;
 	rewind(stdin);
-	gotoXY(50, 10);
-	cout << "Nhap so dien thoai can tim kiem: ";
+	//gotoXY(50, 10);
+	cout << "\n\t\tNhap so dien thoai can tim kiem: ";
 	getline(cin, name);
     fileout.open("Timkiem.txt", ios_base::out);
     SearchPhone(Heads, fileout, name);
     fileout.close();
-	gotoXY(40, 5);
-	cout << "NHAN PHIM << SPACE >> DE TRO VE !";
+	//gotoXY(40, 5);
+	cout << "\n\t\t\tNHAN PHIM << SPACE >> DE TRO VE !";
 }
 
 void FindAddress(Phonebook *Heads[])						//=======Hàm tìm kiếm theo địa chỉ===============
@@ -554,26 +554,29 @@ void FindAddress(Phonebook *Heads[])						//=======Hàm tìm kiếm theo địa 
     string name;
 	string Address;
 	rewind(stdin);
-	gotoXY(40, 10);
-    cout << "Nhap dia chi can tim kiem: ";
+	//gotoXY(40, 10);
+    cout << "\n\t\tNhap dia chi can tim kiem: ";
 	getline(cin, Address);
     fileout.open("Timkiem.txt", ios_base::out);
     SearchAddress(Heads, fileout, Address);
     fileout.close();
 	gotoXY(40, 5);
-	cout << "NHAN PHIM << SPACE >> DE TRO VE !";
+	cout << "\n\t\tNHAN PHIM << SPACE >> DE TRO VE !";
 }
 
 void DelName(Phonebook *Heads[])								//==========Hàm xóa theo tên============
 {
 	ofstream fileout;
     string name;
-    int dem = 0;
 	rewind(stdin);
 	cout << "\n\t\tNhap ten: ";
 	getline(cin, name);
-    dem = TimNode1(Heads, name);
-    if (dem == 1)
+    int dem = TimNode1(Heads, name);
+	if (dem == 0)
+	{
+		cout << "\n\t\tTen ban vua nhap khong co trong danh ba !";
+	}
+    else if (dem == 1)
     {
         DeleteToName(Heads, name);
         fileout.open("ListPhone1.txt", ios_base::out);
@@ -598,8 +601,8 @@ void DelNumber(Phonebook *Heads[])									//==========Hàm xóa theo số =====
 {
 	ofstream fileout;
 	string number;
-	gotoXY(40, 10);
-    cout << "Nhap so dien thoai:";
+	//gotoXY(40, 10);
+    cout << "\n\t\tNhap so dien thoai:";
     cin >> number;
     DeleteToNumber(Heads, number);
     fileout.open("ListPhone1.txt", ios_base::out);
@@ -613,17 +616,17 @@ void EditName(Phonebook *Heads[])            //============Hàm chỉnh sửa th
 	ofstream fileout;
     string name;
 	rewind(stdin);
-	gotoXY(40, 10);
-	cout << "Nhap ten: ";
+	//gotoXY(40, 10);
+	cout << "\n\t\tNhap ten: ";
 	getline(cin, name);
     fileout.open("ListPhone1.txt", ios_base::out);
     UpdateInfoToName(Heads, name);
     DisplayToFile(Heads, fileout);
     fileout.close();
-	gotoXY(40, 5);
-	cout << "   DA CHINH SUA THANH CONG !";
+	//gotoXY(40, 5);
+	cout << "\n\t\t   DA CHINH SUA THANH CONG !";
 	gotoXY(40, 6);
-	cout << "NHAN PHIM << SPACE >> DE TRO VE !";
+	cout << "\n\t\tNHAN PHIM << SPACE >> DE TRO VE !";
 }
 
 void EditNumber(Phonebook *Heads[])							//===========Hàm chỉnh sửa theo số điện thoại=========
@@ -631,17 +634,17 @@ void EditNumber(Phonebook *Heads[])							//===========Hàm chỉnh sửa theo s
 	ofstream fileout;
     string number;
 	rewind(stdin);
-	gotoXY(40, 10);
-	cout << "Nhap so dien thoai: ";
+	//gotoXY(40, 10);
+	cout << "\n\t\tNhap so dien thoai: ";
 	getline(cin, number);
     fileout.open("ListPhone1.txt", ios_base::out);
     UpdateInfoToNumber(Heads, number);
     DisplayToFile(Heads, fileout);
     fileout.close();
 	gotoXY(40, 5);
-	cout << "   DA CHINH SUA THANH CONG !";
+	cout << "\n\t\t   DA CHINH SUA THANH CONG !";
 	gotoXY(40, 6);
-	cout << "NHAN PHIM << SPACE >> DE TRO VE !";
+	cout << "\n\t\tNHAN PHIM << SPACE >> DE TRO VE !";
 }
 
 
@@ -1424,7 +1427,7 @@ int main()
 
 	DisableCtrButton(0, 1, 1);
 	DisableResizeWindow();
-	SetConsoleTitle(L"PHONE_BOOK");
+	//SetConsoleTitle(L"PHONE_BOOK");
 
 	//=======================================================================//
 	
@@ -1481,3 +1484,5 @@ int main()
 }
 
 //////////==========================//   KẾT THÚC //===============================//////////
+
+//Console.WriteLine("\n\n\n");
