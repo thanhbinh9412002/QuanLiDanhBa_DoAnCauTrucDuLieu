@@ -1427,7 +1427,7 @@ int main()
 
 	DisableCtrButton(0, 1, 1);
 	DisableResizeWindow();
-	//SetConsoleTitle(L"PHONE_BOOK");
+	SetConsoleTitle(L"PHONE_BOOK");
 
 	//=======================================================================//
 	
